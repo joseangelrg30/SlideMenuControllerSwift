@@ -88,7 +88,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    public convenience init(mainViewController: UIViewController, leftMenuViewController: UIViewController) {
+    @objc public convenience init(mainViewController: UIViewController, leftMenuViewController: UIViewController) {
         self.init()
         self.mainViewController = mainViewController
         leftViewController = leftMenuViewController
@@ -1041,7 +1041,7 @@ extension UIViewController {
         return nil
     }
     
-    public func addLeftBarButtonWithImage(_ buttonImage: UIImage) {
+    @objc public func addLeftBarButtonWithImage(_ buttonImage: UIImage) {
         let leftButton: UIBarButtonItem = UIBarButtonItem(image: buttonImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.toggleLeft))
         navigationItem.leftBarButtonItem = leftButton
     }
