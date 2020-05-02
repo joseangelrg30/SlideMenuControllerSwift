@@ -690,7 +690,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    open func changeLeftViewWidth(_ width: CGFloat) {
+    @objc open func changeLeftViewWidth(_ width: CGFloat) {
         
         SlideMenuOptions.leftViewWidth = width
         var leftFrame: CGRect = view.bounds
